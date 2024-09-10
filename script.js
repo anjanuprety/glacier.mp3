@@ -114,6 +114,13 @@ const renderSongs= array =>{
 
   //updating HTML elements to display the songs
   playlistSongs.innerHTML= songsHTML;
+};
+
+  playButton.addEventListener('click', ()=>{
+    if(userData?.currentSong===null){
+      playSong(userData?.songs[0].id)
+    }
+  })
 
   //passing alphabetically sorted songs data to display in the UI
   renderSongs(sortSongs);
@@ -131,6 +138,26 @@ const renderSongs= array =>{
     })
     return userData?.songs; //returns the songs list
   }
-}; 
 
-const playSong= id =>{}
+const playSong= id =>{
+  const song= userData?.songs.find((song) => song.id===id);
+  //set the audio source to the song source and display corresponding data
+  audio.src=song.src;
+  audio.title=song.title;
+
+  //check if no current song is playing or if the current song is different from the one that is about to be played.
+
+  if(userData?.currentSong=== null || userData.currentSong.id !== song.id){
+    audio.currentTime=0;
+  }
+
+  //else resume the current song
+  else{
+    audio.currentTime=userData?.songCurrentTime
+  }
+  //look for class playing in CSS and add it to playBtn
+  userData.currentSong=song;
+  playButton.classList.add("playing")
+  audio.play()
+
+}
