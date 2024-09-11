@@ -130,9 +130,6 @@ const getCurrentSongIndex=()=>{
     }
   })
 
-  //passing alphabetically sorted songs data to display in the UI
-  renderSongs(sortSongs);
-
   //sorting songs alphabetically
   const sortSongs=()=>{
     userData?.songs.sort((a,b)=>{
@@ -146,6 +143,10 @@ const getCurrentSongIndex=()=>{
     })
     return userData?.songs; //returns the songs list
   }
+
+  //passing alphabetically sorted songs data to display in the UI
+  renderSongs(sortSongs);
+
 
 const playSong= id =>{
   const song= userData?.songs.find((song) => song.id===id);
