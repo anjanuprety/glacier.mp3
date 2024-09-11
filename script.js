@@ -116,6 +116,10 @@ const renderSongs= array =>{
   playlistSongs.innerHTML= songsHTML;
 };
 
+const getCurrentSongIndex=()=>{
+  return userData?.songs.indexOf(userData?.currentSong);
+}
+
   playButton.addEventListener('click', ()=>{
     if(userData?.currentSong===null){
       playSong(userData?.songs[0].id)
@@ -171,5 +175,37 @@ const playSong= id =>{
     playButton.classList.remove("playing")
     audio.pause()
   };
+const playNextSong=()=>{
+  //checking if there's no current song playing in the userData object.
+  if(userData?.currentSong===null){
+    playSong(userData?.songs[0].id);
+  }
+  else{
+    const currentSongIndex= getCurrentSongIndex();
+  }
+  //retriving the next song in the playlist
+  const nextSong= userData?.songs[currentSongIndex+1];
+  playSong(nextSong.id);
+}
+
+const playPreviousSong=()=>{
+  //checking if there's no current song playing in the userData obj
+  if(userData?.currentSong===null){
+    return;
+  }
+  else{
+    const currentSongIndex=getCurrentSongIndex();
+  }
+  //retriving the previous song in the playlist
+  const previousSong= userData?.songs[currentSongIndex-1];
+  playSong(previousSong.id);
+}
+//highlightin the current playing song
+const highlightCurrentSong=()=>{
+  const playlistSongElement= document.querySelectorAll('.playlist-song');
+  userData?.currentSong?.id
+}
 
 pauseButton.addEventListener("click", pauseSong);
+nextButton.addEventListener("click", playNextSong);
+previousButton.addEventListener('click',playPreviousSong);
