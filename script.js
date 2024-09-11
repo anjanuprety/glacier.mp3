@@ -162,6 +162,14 @@ const playSong= id =>{
   //look for class playing in CSS and add it to playBtn
   userData.currentSong=song;
   playButton.classList.add("playing")
-  audio.play()
+  audio.play();
+};
 
-}
+  const pauseSong=()=>{
+    userData.songCurrentTime=audio.currentTime
+    //pause the song that was playing
+    playButton.classList.remove("playing")
+    audio.pause()
+  };
+
+pauseButton.addEventListener("click", pauseSong);
