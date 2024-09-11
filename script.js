@@ -165,7 +165,8 @@ const playSong= id =>{
   }
   //look for class playing in CSS and add it to playBtn
   userData.currentSong=song;
-  playButton.classList.add("playing")
+  playButton.classList.add("playing");
+  highlightCurrentSong();
   audio.play();
 };
 
@@ -202,8 +203,17 @@ const playPreviousSong=()=>{
 }
 //highlightin the current playing song
 const highlightCurrentSong=()=>{
-  const playlistSongElement= document.querySelectorAll('.playlist-song');
-  userData?.currentSong?.id
+  const playlistSongElements= document.querySelectorAll('.playlist-song');
+  const songToHighlight= document.getElementById(`song-${userData?.currentSong?.id}`);
+  playlistSongElements.forEach(songEl => {
+    //removing attribute for each song
+    songEl.removeAttribute("aria-current");
+   
+    //adding attribute back to current playing song
+  if(songToHighlight){
+    songToHighlight.setAttribute("aria-current", "true")
+  }
+  });
 }
 
 pauseButton.addEventListener("click", pauseSong);
