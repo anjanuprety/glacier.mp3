@@ -196,6 +196,8 @@ button:hover{
   visibility: visible;
   justify-content: start;
   list-style: none;
+  max-height: 450px;
+  overflow: auto;
 }
 
 .playlist-song {
