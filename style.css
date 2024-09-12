@@ -196,7 +196,7 @@ button:hover{
   visibility: visible;
   justify-content: start;
   list-style: none;
-  max-height: 450px;
+  max-height: 400px;
   overflow: auto;
 }
 
