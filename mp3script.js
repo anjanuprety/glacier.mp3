@@ -47,10 +47,10 @@ const allSongs=[
   },
   {
     id: 5,
-    title: "From the Ground Up",
-    artist: "Quincy Larson",
-    duration: "3:12",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/from-the-ground-up.mp3",
+    title: "I Know the End",
+    artist: "Phoebe Bridgers",
+    duration: "5:44",
+    src: "https://www.dropbox.com/scl/fi/d4kohnow564kz3f68lohx/I-Know-The-End.mp3?rlkey=8a8m3erb2ecrqup26tj5dxcrt&st=9bqay80d&dl=1",
   },
   {
     id: 6,
