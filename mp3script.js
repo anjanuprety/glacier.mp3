@@ -168,6 +168,7 @@ const playSong= id =>{
   userData.currentSong=song;
   playButton.classList.add("playing");
   highlightCurrentSong();
+  setPlayerDisplay();
   audio.play();
 };
 
@@ -202,6 +203,20 @@ const playPreviousSong=()=>{
   const previousSong= userData?.songs[currentSongIndex-1];
   playSong(previousSong.id);
 }
+
+//To display the current song title and artist in player display
+const setPlayerDisplay=()=>{
+  const playingSong = document.getElementById("player-song-title");
+  const songArtist = document.getElementById("player-song-artist");
+  const currentTitle=userData?.currentSong?.title;
+  const currentArtist=userData?.currentSong?.artist;
+
+  //setting text content value
+  playingSong.textContent = currentTitle ? currentTitle : "";
+  songArtist.textContent = currentArtist ? currentArtist : "";
+
+}
+
 //highlightin the current playing song
 const highlightCurrentSong=()=>{
   const playlistSongElements= document.querySelectorAll('.playlist-song');
@@ -213,7 +228,7 @@ const highlightCurrentSong=()=>{
     //adding attribute back to current playing song
   if(songToHighlight){
     songToHighlight.setAttribute("aria-current", "true")
-  }
+     }
   });
 }
 
