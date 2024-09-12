@@ -10,40 +10,40 @@ const shuffleButton = document.getElementById("shuffle");
 const allSongs=[
   {
     id: 0,
-    title: "Scratching The Surface",
-    artist: "Quincy Larson",
-    duration: "4:25",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
+    title: "One",
+    artist: "Ed Sheeran",
+    duration: "4:12",
+    src: "https://www.dropbox.com/scl/fi/so6171mtkcxvbhfotguj5/Ed_Sheeran-One_Audio-128k.m4a?rlkey=c4vm84b4n7f21pvjywofpro49&st=zocecwnq&dl=1",
     
   },
   {
     id: 1,
-    title: "Can't Stay Down",
-    artist: "Quincy Larson",
-    duration: "4:15",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3",
+    title: "Creature Fear",
+    artist: "Bon Iver",
+    duration: "3:06",
+    src: "https://www.dropbox.com/scl/fi/72ueso1y2ueqgcyxeylbr/Creature-Fear.mp3?rlkey=ghqh957gooffsrc20sjyw8tcb&st=1igtrk8d&dl=1",
 
   },
   {
     id: 2,
-    title: "Still Learning",
-    artist: "Quincy Larson",
-    duration: "3:51",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/still-learning.mp3",
+    title: "Cherry Wine",
+    artist: "Hozier",
+    duration: "4:13",
+    src: "https://www.dropbox.com/scl/fi/t3t44bkelnwq6433m6q8j/Hozier_-_Cherry_Wine_-Official_Video-128k.m4a?rlkey=fb33d32nncd4eb66hq0r4r263&st=31wjj5a6&dl=1",
   },
   {
     id: 3,
-    title: "Cruising for a Musing",
-    artist: "Quincy Larson",
-    duration: "3:34",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3",
+    title: "Hawaaijahaaj",
+    artist: "Sajjan Raj Vaidhya",
+    duration: "4:05",
+    src: "https://www.dropbox.com/scl/fi/mazx8znpqe48x94j4vktn/Hawaaijahaaj-128k.m4a?rlkey=4zvylxjvk1wftcpnry7vzd0s2&st=2ac6xwkz&dl=1",
   },
   {
     id: 4,
-    title: "Never Not Favored",
-    artist: "Quincy Larson",
+    title: "Leaving My Love Behind",
+    artist: "Lewis Capaldi",
     duration: "3:35",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/never-not-favored.mp3",
+    src: "https://www.dropbox.com/scl/fi/ef9kdd18vmpgvdmwf9huh/Leaving_My_Love_Behind-128k.m4a?rlkey=rltrhobg2z32qfz4rxscwbss0&st=f2olm66t&dl=1",
   },
   {
     id: 5,
@@ -61,26 +61,48 @@ const allSongs=[
   },
   {
     id: 7,
-    title: "Can't Stop Me. Can't Even Slow Me Down.",
-    artist: "Quincy Larson",
-    duration: "3:52",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/cant-stop-me-cant-even-slow-me-down.mp3",
+    title: "Crossfire (Live)",
+    artist: "Rag'n Bone Man",
+    duration: "4:06",
+    src: "https://www.dropbox.com/scl/fi/t3t44bkelnwq6433m6q8j/Hozier_-_Cherry_Wine_-Official_Video-128k.m4a?rlkey=fb33d32nncd4eb66hq0r4r263&st=u4upyflk&dl=1",
   },
   {
     id: 8,
-    title: "The Surest Way Out is Through",
-    artist: "Quincy Larson",
-    duration: "3:10",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/the-surest-way-out-is-through.mp3",
+    title: "Seventeen Going Under",
+    artist: "Sam Fender",
+    duration: "4:57",
+    src: "https://www.dropbox.com/scl/fi/el9erjhvgad8yrma691jz/Seventeen_Going_Under-128k.m4a?rlkey=84gyptmk5m5yvubteq8wyle1q&st=fr15sdpr&dl=1",
   },
   {
     id: 9,
-    title: "Chasing That Feeling",
-    artist: "Quincy Larson",
-    duration: "2:43",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/chasing-that-feeling.mp3",
+    title: "SongBird",
+    artist: "Fleetwood Mac",
+    duration: "3:20",
+    src: "https://www.dropbox.com/scl/fi/0qa4saq3bar7ia5966tl9/Songbird_-2004_Remaster-128k.m4a?rlkey=l58gklmx55lhoqipercefphel&st=61e37o88&dl=1",
+  },
+  {
+    id: 10,
+    title: "Space Oddity",
+    artist: "David Bowie",
+    duration: "5:18",
+    src: "https://www.dropbox.com/scl/fi/dtguv86aynb2fjwokpn7x/Space-Oddity-2015-Remaster.mp3?rlkey=suii7u99t6q8zpaofmemhci0u&st=573sxrqw&dl=1", 
+  },
+  {
+    id: 11,
+    title: "To Be Loved",
+    artist: "Adele",
+    duration: "6:43",
+    src: "https://www.dropbox.com/scl/fi/l89o93cv74y1s7eetkqwl/To_Be_Loved-128k.mp3?rlkey=gq3pnq36xlk8nhvs0iquu8qdz&st=ng12y6ni&dl=1", 
   }
 ];
+/*  {
+    id: ,
+    title: "",
+    artist: "",
+    duration: "",
+    src: "", 
+  }
+    */
 
 //Integrating the Web Audio API that lets you generate and process audio in web app
 //creating a HTML5 audio element with 'new' and storing in a variable
