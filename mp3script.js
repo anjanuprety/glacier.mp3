@@ -169,6 +169,7 @@ const playSong= id =>{
   playButton.classList.add("playing");
   highlightCurrentSong();
   setPlayerDisplay();
+  setPlayButtonAccessibleText();
   audio.play();
 };
 
@@ -215,6 +216,11 @@ const setPlayerDisplay=()=>{
   playingSong.textContent = currentTitle ? currentTitle : "";
   songArtist.textContent = currentArtist ? currentArtist : "";
 
+}
+
+const setPlayButtonAccessibleText=()=>{
+  const song= userData?.currentSong || userData?.songs[0];
+  playButton.setAttribute("aria-label", song?.title? `Play ${song.title}`: "Play");
 }
 
 //highlightin the current playing song
