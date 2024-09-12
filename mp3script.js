@@ -54,10 +54,10 @@ const allSongs=[
   },
   {
     id: 6,
-    title: "Walking on Air",
-    artist: "Quincy Larson",
-    duration: "3:25",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/walking-on-air.mp3",
+    title: "Angel",
+    artist: "Sarah McLachlan",
+    duration: "4:32",
+    src: "https://www.dropbox.com/scl/fi/b5zr9dp1o64ngx8ddq4gt/Angel-Sarah-McLachlan.mp3?rlkey=k240srsteuzlyeggzwwpcfsav&st=lhicbfh9&dl=1",
   },
   {
     id: 7,
