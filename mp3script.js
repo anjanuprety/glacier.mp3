@@ -239,6 +239,13 @@ const deleteSong=(id)=>{
     resetButton.ariaLabel="Reset playlist";
     resetButton.appendChild(resetText);
     playlistSongs.appendChild(resetButton);
+
+    resetButton.addEventListener('click',()=>{
+      userData.songs=[...allSongs];
+      renderSongs(sortSongs());
+      setPlayButtonAccessibleText();
+      resetButton.remove();  
+    });
   }
 }
 
@@ -279,4 +286,19 @@ pauseButton.addEventListener("click", pauseSong);
 nextButton.addEventListener("click", playNextSong);
 previousButton.addEventListener('click',playPreviousSong);
 shuffleButton.addEventListener('click', shuffle);
-resetButton.addEventListener('click',()=>{});
+audio.addEventListener('ended',()=>{
+  const currentSongIndex = getCurrentSongIndex();
+  const nextSongExists = currentSongIndex +1 < userData.songs.length;
+  if(nextSongExists){
+    playNextSong();
+  }
+  else{
+    userData.currentSong=null;
+    userData.songCurrentTime=0;
+  }
+})
+
+pauseSong();
+setPlayerDisplay();
+highlightCurrentSong();
+setPlayButtonAccessibleText();
