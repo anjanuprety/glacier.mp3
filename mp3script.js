@@ -34,7 +34,7 @@ const allSongs=[
   {
     id: 3,
     title: "Hawaaijahaaj",
-    artist: "Sajjan Raj Vaidhya",
+    artist: "Bartika Eam Rai",
     duration: "4:05",
     src: "https://www.dropbox.com/scl/fi/mazx8znpqe48x94j4vktn/Hawaaijahaaj-128k.m4a?rlkey=4zvylxjvk1wftcpnry7vzd0s2&st=2ac6xwkz&dl=1",
   },
