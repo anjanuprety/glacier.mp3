@@ -2,10 +2,11 @@
   /* colors */
   --primary-color: #dfdfe2;
   --secondary-color: #ffffff;
-  --app-background-color: #4d4d62;
   --background-color: #1b1b32;
   --foreground-color: #3b3b4f;
-  --highlight-color: #f1be32;
+  --highlight-color: #c99a1a;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 
   /* font sizes */
   --root-font-size: 16px;
@@ -122,10 +123,11 @@ ul {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  padding: 14px;
+  padding: 20px;
   background-color: var(--background-color);
   height: 153px;
   width: 226px;
+  cursor: pointer;
 }
 
 .player-display-song-artist {
@@ -151,7 +153,7 @@ button {
   color: var(--primary-color);
   cursor: pointer;
   font-size: var(--root-font-size);
-  outline-color: var(--highlight-color);
+  outline-color:#aaaabe;
   text-align: center;
 }
 
@@ -165,8 +167,12 @@ button {
 
 button:focus,
 .playlist-song:focus {
-  outline-style: dashed;
+  outline-style:dotted;
   outline-width: 2px;
+}
+button:hover{
+  background-color:#4c4c68;
+  
 }
 
 /* Playlist */
@@ -235,13 +241,14 @@ button:focus,
 
 .playlist-song-title {
   font-size: 0.85rem;
-  width: 241px;
+  width: 231px;
   text-align: left;
 }
 
 .playlist-song-artist {
   font-size: 0.725rem;
-  width: 80px;
+  width: 90px;
+  margin-right: 5%;
 }
 
 .playlist-song-duration {
