@@ -205,6 +205,18 @@ const playPreviousSong=()=>{
   playSong(previousSong.id);
 }
 
+const shuffle=()=>{
+  //subtracting 0.5 from math.random will give either a positive or negative value
+  //This should re-order the elements randomly when sorting
+  userData?.songs.sort(()=>Math.random()-0.5);
+  userData.currentSong= null;
+  userData.songCurrentTime=0;
+  renderSongs(userData?.songs);
+  pauseSong();
+  setPlayerDisplay();
+  setPlayButtonAccessibleText();
+}
+
 //To display the current song title and artist in player display
 const setPlayerDisplay=()=>{
   const playingSong = document.getElementById("player-song-title");
@@ -241,3 +253,4 @@ const highlightCurrentSong=()=>{
 pauseButton.addEventListener("click", pauseSong);
 nextButton.addEventListener("click", playNextSong);
 previousButton.addEventListener('click',playPreviousSong);
+shuffleButton.addEventListener('click', shuffle);
