@@ -208,11 +208,12 @@ const playNextSong=()=>{
   }
   else{
     const currentSongIndex= getCurrentSongIndex();
-  }
+  
   //retriving the next song in the playlist
   const nextSong= userData?.songs[currentSongIndex+1];
   playSong(nextSong.id);
-}
+  }
+};
 
 const playPreviousSong=()=>{
   //checking if there's no current song playing in the userData obj
@@ -221,11 +222,11 @@ const playPreviousSong=()=>{
   }
   else{
     const currentSongIndex=getCurrentSongIndex();
-  }
   //retriving the previous song in the playlist
   const previousSong= userData?.songs[currentSongIndex-1];
   playSong(previousSong.id);
-}
+  }
+};
 
 const shuffle=()=>{
   //subtracting 0.5 from math.random will give either a positive or negative value
